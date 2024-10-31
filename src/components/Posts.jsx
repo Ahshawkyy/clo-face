@@ -18,7 +18,6 @@ import { Box, Checkbox, Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
-
 const Posts = () => {
   const myPosts = [
     {
@@ -70,9 +69,6 @@ const Posts = () => {
       img: "https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
-
-  // const [largeM, setLargeM] = useState(false);
-  //   const refMenu = useRef(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -81,7 +77,6 @@ const Posts = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   const renderMenu = (
     <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
       <MenuItem onClick={handleClose}>
@@ -139,13 +134,10 @@ const theme = useTheme();
               icon={<FavoriteBorder />}
               checkedIcon={<Favorite sx={{ color: "red" }} />}
             />
-
             <IconButton aria-label="share">
               <ShareIcon />
             </IconButton>
-
             <Box flexGrow={1} />
-
             <Checkbox
               icon={<BookmarkBorderIcon />}
               checkedIcon={<BookmarkIcon sx={{ color: "orange" }} />}
@@ -153,10 +145,8 @@ const theme = useTheme();
           </CardActions>
         </Card>
       ))}
-
       {renderMenu}
     </Box>
   );
 };
-
 export default Posts;
