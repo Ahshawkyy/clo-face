@@ -12,7 +12,6 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar, Menu, MenuItem } from "@mui/material";
 import { useRef, useState } from "react";
-
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -28,7 +27,6 @@ const Search = styled("div")(({ theme }) => ({
     width: "auto",
   },
 }));
-
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: "100%",
@@ -38,7 +36,6 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
 }));
-
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
@@ -52,7 +49,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-
 const Appbarr = ({showList,setShowList}) => {
   const [mobileM, setMobileM] = useState(false);
   const refMobileMenu = useRef(null);
@@ -82,9 +78,7 @@ const Appbarr = ({showList,setShowList}) => {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      <MenuItem
-      // onClick={handleProfileMenuOpen}
-      >
+      <MenuItem >
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -98,7 +92,6 @@ const Appbarr = ({showList,setShowList}) => {
       </MenuItem>
     </Menu>
   );
-
   const [largeM, setLargeM] = useState(false);
   const refMenu = useRef(null);
   const renderMenu = (
@@ -125,7 +118,6 @@ const Appbarr = ({showList,setShowList}) => {
       </MenuItem>
     </Menu>
   );
-
   return (
       <AppBar position="sticky">
         <Toolbar>
@@ -141,7 +133,6 @@ const Appbarr = ({showList,setShowList}) => {
           >
             <MenuIcon />
           </IconButton>
-
           <Typography
             variant="h6"
             noWrap
@@ -150,7 +141,6 @@ const Appbarr = ({showList,setShowList}) => {
           >
             Col-Face
           </Typography>
-
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -160,10 +150,8 @@ const Appbarr = ({showList,setShowList}) => {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ alignItems: "center", display: { xs: "none", md: "flex" } }}>
-
             <IconButton 
             sx={{width:"30px",height:"30px", marginRight:"10px"}}
               size="large"
@@ -185,28 +173,23 @@ const Appbarr = ({showList,setShowList}) => {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-
             <IconButton
               ref={refMenu}
               size="large"
               edge="end"
               aria-label="account of current user"
-              // aria-controls={menuId}
               aria-haspopup="true"
               onClick={() => setLargeM(!largeM)}
               color="inherit"
             >
               <Avatar src="./Image/mee.jpg" sx={{width:"40px",height:"40px"}} />
             </IconButton>
-
           </Box>
-
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               ref={refMobileMenu}
               size="large"
               aria-label="show more"
-              // aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={() => {
                 setMobileM(!mobileM);
@@ -219,10 +202,7 @@ const Appbarr = ({showList,setShowList}) => {
         </Toolbar>
         {renderMobileMenu}
         {renderMenu}
-      </AppBar>
-
-    
-    
+      </AppBar>  
   );
 };
 
