@@ -20,7 +20,6 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
 const AddPosts = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,8 +33,6 @@ const AddPosts = () => {
         <AddIcon />
       </Fab>
       </Tooltip>
-
-
       <Modal
         open={open}
         onClose={handleClose}
@@ -67,22 +64,13 @@ const AddPosts = () => {
           <ImageIcon color="secondary"/>
           <VideoCameraBackIcon color="success"/>
           <PersonAddIcon color="error"/>
-        </Stack>
-        
+        </Stack> 
         <Button variant="contained" color="primary" sx={{width:"75%", ml:"15%"}}
-        
         >
           Post
         </Button>
-          
-      
         </Box>
       </Modal>
-
-
-
-
-
     </>
   )
 }
