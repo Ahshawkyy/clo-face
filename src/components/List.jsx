@@ -91,7 +91,7 @@ const Listt = ({ setmyMOde, theme ,showList,setShowList}) => {
   return (
     <Box
       className="bgc menud"
-      sx={{ minWidth: 250,
+      sx={{ minWidth: 100,
          flexGrow: 4,
           display: { xs: showList, md: "block" } }}
     >
