@@ -104,33 +104,17 @@ const Listt = ({ setmyMOde, theme ,showList,setShowList}) => {
             </ListItemButton>
           </ListItem>
         ))}
-
         <MaterialUISwitch
           onChange={() => {
             localStorage.setItem(
               "currentMode",
               theme.palette.mode === "dark" ? "light" : "dark"
             );
-
             setmyMOde(theme.palette.mode === "light" ? "dark" : "light");
           }}
           sx={{ ml: 6, mt: 1 }}
           defaultChecked={theme.palette.mode === "dark"}
         />
-        {/* <Button
-          onClick={() => {
-            localStorage.setItem(
-              "currentMode",
-              theme.palette.mode === "dark" ? "light" : "dark"
-            );
-
-            setmyMOde(theme.palette.mode === "light" ? "dark" : "light");
-          }}
-          variant="text"
-          color="primary"
-        >
-          change theme
-        </Button> */}
       </List>
     </Box>
   );
