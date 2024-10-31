@@ -7,7 +7,6 @@ import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
-
 const itemData = [
   {
     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
@@ -22,7 +21,6 @@ const itemData = [
     title: "Camera",
   },
 ];
-
 const Online = () => {
   return (
     <Box
@@ -81,7 +79,6 @@ const Online = () => {
         <Typography variant="h6" sx={{ fontWeight: 300, ml: 2 }} mt={2}>
           Lastest Conversation
         </Typography>
-
         <List
           sx={{
             width: "100%",
@@ -114,9 +111,7 @@ const Online = () => {
               }
             />
           </ListItem>
-
           <Divider variant="inset" component="li" />
-
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -140,9 +135,7 @@ const Online = () => {
               }
             />
           </ListItem>
-
           <Divider variant="inset" component="li" />
-
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -171,5 +164,4 @@ const Online = () => {
     </Box>
   );
 };
-
 export default Online;
