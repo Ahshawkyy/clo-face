@@ -14,9 +14,7 @@ import Person from "@mui/icons-material/Person";
 import Settings from "@mui/icons-material/Settings";
 import Storefront from "@mui/icons-material/Storefront";
 import AccountBox from "@mui/icons-material/AccountBox";
-
 import styled from "@emotion/styled";
-
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
